@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Client Data" max_length="40" name="x_41121_office_2_0_client_data" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Contact Number" max_length="40" name="contact_number" type="phone_number_e164"/>
+        <element label="Email" max_length="100" name="email" type="string"/>
+        <element choice="1" label="Job Type" max_length="40" name="job_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element display="true" label="Name" max_length="100" name="name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="ID" max_length="40" name="number" type="string"/>
+        <element label="Referred By" max_length="32" name="referred_by" reference="x_41121_office_2_0_client_data" type="reference"/>
+        <element choice="1" label="Source Type" max_length="40" name="source" type="choice">
+            <choice/>
+        </element>
+        <element label="Started Working Since" max_length="40" name="started_working_since" type="glide_date"/>
+        <element label="Total Billed Amount" max_length="20" name="total_billed_amount" type="currency"/>
+        <element label="Total Amount Due" max_length="20" name="total_due_amount" type="currency"/>
+        <element label="Total Paid Amount" max_length="20" name="total_paid_amount" type="currency"/>
+        <index name="index">
+            <element name="location"/>
+        </index>
+        <index name="index2">
+            <element name="referred_by"/>
+        </index>
+    </element>
+</database>
