@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Payment" max_length="40" name="x_41121_office_2_0_payment" type="collection">
+        <element label="Client" max_length="32" name="client" reference="x_41121_office_2_0_client_data" type="reference"/>
+        <element label="Deposited Amount (INR)" max_length="20" name="deposited_amount" type="currency"/>
+        <element label="Transaction" max_length="40" name="transaction" type="glide_date"/>
+        <element label="Transaction Remarks" max_length="1000" name="transaction_remark" type="string"/>
+        <element label="USD Billed" max_length="20" name="usd_billed" type="currency"/>
+        <element label="Work" max_length="32" name="work" reference="x_41121_office_2_0_work" type="reference"/>
+        <index name="index">
+            <element name="work"/>
+        </index>
+        <index name="index2">
+            <element name="client"/>
+        </index>
+    </element>
+</database>
