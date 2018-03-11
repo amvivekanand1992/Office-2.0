@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Work" max_length="40" name="x_41121_office_2_0_work" type="collection">
+        <element label="Billed Amount" max_length="20" name="billed_amount" type="currency"/>
+        <element choice="1" label="Billing Type" max_length="40" name="billing_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Client" max_length="32" name="client" reference="x_41121_office_2_0_client_data" type="reference"/>
+        <element label="Description" max_length="1000" name="description" type="string"/>
+        <element label="Amount Due" max_length="20" name="due_amount" type="currency"/>
+        <element label="Fixed Bid Billing" max_length="20" name="fixed_bid_billing" type="currency"/>
+        <element label="Hourly Rate" max_length="20" name="hourly_rate" type="currency"/>
+        <element label="Hours Spent" max_length="40" name="hours_spent" type="integer"/>
+        <element choice="1" label="Job Type" max_length="40" name="job_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Monthly Billing" max_length="20" name="monthly_billing" type="currency"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Paid Amount" max_length="20" name="paid_amount" type="currency"/>
+        <element label="Short Description" max_length="250" name="short_description" type="string"/>
+        <index name="index">
+            <element name="client"/>
+        </index>
+    </element>
+</database>
